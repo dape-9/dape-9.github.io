@@ -1,282 +1,271 @@
 <!DOCTYPE html>
 <html>
-<title>Daniel Peña Portfolio</title>
+<title>Portfolio Daniel</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; text-align: center;}
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-hr { 
-   border: 5px solid #333333; 
-   height: 0px; 
-   text-align: center; 
- }
+html,body,h1,h2,h3,h2,h5 {font-family: "Open Sans", sans-serif}
 </style>
-<body>
+<body class="w3-theme-l5">
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a  class="w3-bar-item w3-button w3-theme-l1"> PORTFOLIO </a>
-	<a href="#" class="w3-bar-item w3-button w3-hover-white">Daniel Peña</a>
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a href="./index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="./Curriculum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Curriculum"><i class="fa fa-globe"></i> Curriculum</a>
+ 
   </div>
 </div>
 
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">Portfolio</a>
+  <a href="./Curriculum.html" class="w3-bar-item w3-button w3-padding-large">Curriculum</a>
+</div>
 
-<div class="w3-main" >
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h2 class="w3-center">Daniel Peña </h2>
+         <p class="w3-center"><img src="./Gifs/Logo.png" class="w3-circle" style="height:106px;width:106px" alt="Daniel Peña"></p>
 
-  <div class="w3-row w3-padding-64">
-    <div class="w3-center	w3-container">
-      <h1 class="w3-text-teal">Sobre mí</h1>
-      <p>Hola.<br>
-	  Mi nombre es Daniel Peña. <br>
-	  He estudiado Ingeniería Informática en la Universidad Politécnica de Madrid. <br>
-	  Desde siempre me ha llamado la atención como se crean los videojuegos, por lo que empecé <br>
-	  a estudiar de forma personal todo lo posible sobre este mundo. <br>
-	  En esta página podréis encontrar alguno una pequeña muestra de alguno de mis trabajos.<br>
-	  </p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Ingeniero Informático</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, España</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 15-Abril-1994</p>
+        </div>
+      </div>
+      <br>
+      
+
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Intereses</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-l1">C#</span>
+			<span class="w3-tag w3-small w3-theme-l1">Unity</span>
+			<span class="w3-tag w3-small w3-theme-l1">Videogames</span>
+          </p>
+        </div>
+      </div>
+      <br>
+    <!-- End Left Column -->
     </div>
-  </div>
-
-  
-  
-<hr >
-<!-- PONG-->
-  <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">PONG</h2>
-      <p>Pong es un videojuego clásico, y también uno de los primeros videojuegos que programé.<br>
-	  Elegí este juego para empezar debido a que es bastante sencillo,<br>
-	  pero aportaba distintos elementos como físicas, colisiones, UI , etc.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Pong.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-  
-  
-<hr >
-<!-- SNAKE-->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Snake</h2>
-      <p> Mi segundo proyecto fue Snake.
-	  Un  videojuego también clásico, que me había llamado mucho la atención<br>
-	  cuando era pequeño, y quise realizarlo por mí mismo.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Snake.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-  
-  
-<hr >
-<!--PHYSICS -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Physics</h2>
-      <p>Para comprobar cómo funcionaban las físicas en Unity realicé <br>
-	  este pequeño ejemplo en el que jugaba con distintos<br>
-	  hinge joints, pesos, y físicas para aprender como usarlos en futuros proyectos.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	   <IMG SRC="./Gifs/GIF_Physics.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-  
-  
-<hr >
-<!--NAVES -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Naves</h2>
-      <p>Este fue uno de los primeros videojuegos que realicé.<br>
-	  A la hora de pensarlo me base en el famoso videojuego Invaders.<br>
-	en este juego tienes que proteger tu planeta de los distintos enemigos que intentan llegar hasta tí.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Nave.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-  
-  
-<hr >
-<!--NAVES -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Mario</h2>
-      <p>El siguiente paso fue realizar un videojuego de tipo plataformas 2D.<br>
-	  Para ello me base en el videojuego de SuperMario, aquí se puede ver el primer
-	  nivel de este juego.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Mario.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-  
-  
-<hr >
-<!-- STACK-->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Stack</h2>
-      <p> El siguiente videojuego es una copia de Stack un videojuego para móviles muy conocido.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Stack.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
     
-<hr >
-<!-- Particles-->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Particles</h2>
-      <p> Unas pequeñas pruebas para aprender el uso de las partículas<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Particles.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-
-
-<hr >
-<!--Procedural Generation -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Generacion Procedimental Mazmorras </h2>
-      <p>
-		Tras realizar distintas pruebas tanto en 3D como en 2D, descubrí el gran potencial<br>
-		que tiene la generación procedimental. <br>
-		Empecé a estudiar la forma de implementarla y termine desarrollando un generador de cuevas o mazmorras<br>
-		totalmente aleatorias.<br>
-		En el siguiente gif se muestran algunas de las formas que se pueden llegar a obtener.<br>
-	  </p>
+    <!-- Middle Column -->
+    <div class="w3-col m9">
     
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	   <IMG SRC="./Gifs/GIF_ProceduralDungeon.gif" style="max-width: 100%;"/>
+	
+		 <!-- Cada uno de los ejemplos -->
+	        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Portfolio </h2>
+		<hr class="w3-clear">
+        <p> Hola! <br>
+		Soy Daniel Peña y este es mi Portfolio personal.<br>
+		Aquí encontrarás una pequeña muestra de los trabajos que he ido realizando con el fin de aprender sobre el mundo de los videojuegos  </p>
+
+      </div>
+      <!-- **************************************************************************** -->
+	
+	
+      <!-- Cada uno de los ejemplos -->
+	        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Red Neuronal + Algoritmo Genético </h2>
+		<hr class="w3-clear">
+        <p>Proceso de aprendizaje de una red neuronal al mezclarse con un algoritmo genético. <br>
+			El objetivo de cada individuo es el de llegar lo más lejos posible evitando los obstáculos
+			En cada iteración los individuos que más lejos llegan pasan su información a la siguiente generación. Así se puede ver como en cada iteracion se toman mejores decisiones para lograr el objetivo. 
+			
 	  </p>
+	  <p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/Neural+Genetic.gif" style="max-width: 100%;"/>
+      </div>
+      <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Algoritmo Genético</h2> </h2>
+        <hr class="w3-clear">
+        <p>
+	 En este caso los individuos parten de un comportamiento totalmente aleatorio y su objetivo es llegar hasta el punto marcado.
+	 En cada iteración se ve como se quedan mas cerca del objetivo ya que los individuos que más cerca llegan, pasan su informacion a las siguientes generaciones.
+	  </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Genetic.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
 	  
-    </div>
-  </div>
-
-
-<hr >
-<!--Procedural Generation -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Generación Procedimental Niveles</h2>
-      <p>
-	  En este caso se muestra un videojuego basado en el juego Spelunky.<br>
-	  Este videojuego utiliza generación procedimental para recrear cada uno de los niveles.<br>
-	  Cada nivel, se crea de forma aleatoria, basándose en ciertos principios, y cierto tipo<br>
-	  de estructuras, lo que hace que cada vez que una partida en este juego , se reproduzca un mapa<br>
-	  totalmente distinto al anterior.<br>
+	  <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Naves </h2>
+        <hr class="w3-clear">
+		<p>Videojuego completo, basado en los famosos videojuegos Invaders y Asteroids.<br>
+		El objetivo es proteger tu base de los distintos asteroides que intentan llegar hasta él.<br>
 	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	   <IMG SRC="./Gifs/GIF_ProceduralGeneration.gif" style="max-width: 100%;"/>
-	  </p>
+	  <p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Nave.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
 	  
-    </div>
-  </div>
+	  
+		<!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Assets 3D</h2>
+        <hr class="w3-clear">
+        <p> Diseños 3D realizados en Blender para el diseño de un videojuego </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/Assets1.jpg" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+		 
+		 
+		 <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Escenario 3D  </h2>
+        <hr class="w3-clear">
+        <p> Mundo diseñado para un pequeño juego de aventuras</p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/WorldLevel.jpg" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+		   
+		   
+		   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Generación Procedimental de Mazmorras</h2>
+        <hr class="w3-clear">
+       <p> Videojuego basado en la generación procedimental de niveles del videojuego Spelunky.
+	  Cada nivel, se crea de forma aleatoria, basándose en ciertos patrones de diseño, con ciertas estructuras prediseñadas.
+	  Lo que hace de cada nivel una aventura totalmente distinta.
+	  
+	  </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_ProceduralGeneration.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
+	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>LineRider </h2>
+        <hr class="w3-clear">
+        <p> Réplica del videojuego Line Rider.</p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/Snowrider.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
+	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Mario </h2>
+        <hr class="w3-clear">
+        <p>Réplica de Super Mario con un estilo muy minimalista.
+	  </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Mario.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Stack</h2>
+        <hr class="w3-clear">
+        <p> Réplica del videojuego Stack de Ketchapp<br>
+		</p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Stack.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Partículas</h2>
+        <hr class="w3-clear">
+		<p>
+		Diseño de distintos efectos con partículas.
+		</p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Particles.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Generacion Mazmorras </h2>
+        <hr class="w3-clear">
+        <p>  Muestra del gran potencial de la generación procedimental para la creación de distintos niveles en un videojuego de mazmorras</p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/DungeonGenerator.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
 
-  
-<hr >
-<!--GENETICA -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Algoritmo Genético</h2>
-      <p>En este ejemplo se muestra el funcionamiento de un algoritmo genético.<br>
-	  Se puede comprobar cómo los distintos individuos parten de un comportamiento totalmente aleatorio,<br>
-	  y tras las distintas iteraciones, se van heredando los mejores comportamientos.<br>
-	  En este caso el objetivo principal es llegar al punto naranja, por lo que los individuos<br>
-	  que mas cerca se quedan tienen más probabilidad de dar su información a las siguientes generaciones.<br>
-	  Al final vemos como casi todos los individuos consiguen llegar al objetivo en pocas iteraciones.<br>
-	  También se puede comprobar hay individuos que no heredan un comportamiento correcto,<br>
-	  esto es debido a las distintas mutaciones que se incorporan en el propio algoritmo.<br>
+	  
+	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Physics </h2>
+        <hr class="w3-clear">
+             <p>Físicas en un entorno 2D, utilizando distintos pesos, hinge joints y colliders<br>
 	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	  <IMG SRC="./Gifs/GIF_Genetic.gif" style="max-width: 100%;"/>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Physics.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
+
+	  
+	  <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Snake </h2>
+        <hr class="w3-clear">
+        <p> Réplica del videojuego Snake, uno de mis videojuegos favoritos de la infancia.
 	  </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Snake.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
+	  
+	   <!-- **************************************************************************** -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2>Pong </h2>
+        <hr class="w3-clear">
+        <p>
+		Primer videojuego completado con elementos de UI, físicas y colisiones.
+	  </p>
+		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
+		<IMG SRC="./Gifs/GIF_Pong.gif" style="max-width: 100%;"/>
+      </div>
+	  <!-- **************************************************************************** -->
+	  
 	 
+	  
+	 
+    <!-- End Middle Column -->
     </div>
+    
+    
+    
+    
+  <!-- End Grid -->
   </div>
   
-  
- <hr >
-<!--NEURAL GENETICA -->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Algoritmo Genético + Red Neuronal</h2>
-      <p>En este ejemplo se muestra el proceso de aprendizaje que tiene una red neuronal<br>
-	  al mezclarse con un algoritmo genético. <br>
-	  En este caso los individuos tienen el objetivo de llegar hasta el punto más alto evitando <br>
-	  los distintos obstáculos que se va encontrando.
-	  Cada uno de los individuos tiene una serie de sensores con los que pueden detectar que tienen alrededor.<br>
-	  Estos datos son tratados por la red neuronal para obtener la dirección que tiene que seguir.<br>
-	  Como se puede comprobar  en cada iteración los individuos van aprendiendo<br>
-	  cómo deben de tratar las diferentes entradas, para poder llegar cada vez más lejos.<br>
-	  Los individuos que llegan más lejos pasan su información a las siguientes <br>
-	  generaciones.Por lo que en cada iteracion el conjunto llega a lugares mas altos.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	   <IMG SRC="./Gifs/GIF_GeneticNeural.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
-  
-  
- <hr >
- <!-- Proyecto 3D-->
-    <div class="w3-row ">
-    <div class="w3-center w3-container">
-      <h2 class="w3-text-teal ">Proyecto3D</h2>
-      <p>
-	  En este ejemplo se muestra una parte del último proyecto en el que estoy trabajando<br>
-	  Una pequeña aventura en 3D en la que la protagonista tiene que ir completando distintas misiones.<br>
-	  </p>
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
-	   <IMG SRC="./Gifs/GIF_3DGame2.gif" style="max-width: 100%;"/>
-	  </p>
-    </div>
-  </div>
- 
- 
-
+<!-- End Page Container -->
 </div>
-  <div class="footer">
-  <p>Daniel Peña</p>
-  </div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-8">
+  <h5>Daniel Peña González</h5>
+</footer>
+
+
 </body>
-</html>
+</html> 
