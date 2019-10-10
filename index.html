@@ -1,479 +1,635 @@
+
 <!DOCTYPE html>
 <html>
-<title>Portfolio Daniel Peña</title>
+<title>Daniel Peña</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 0px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.static {
+  background: white;
+}
+
+.static:hover {
+  opacity:0;
+}
 
 
 
+* {
+  box-sizing: border-box;
+}
 
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
 
-
-
-<!-- <body class="w3-light-grey"> -->
-<body class="w3-blue">
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
   
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <h2 class="w3-center">Daniel Peña </h2>
-        <p class="w3-center"><img src="Images/Logo.png" class="w3-circle" style="height:200px;width:200px" alt="Daniel Peña"></p>
-        <hr>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>Game Developer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Madrid</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>dapegoog@gmail.com</p>
-		  <p><i class="fa fa-file fa-fw w3-margin-right w3-large w3-text-blue"></i><a href=index.html>Portfolio</a></p>
-		  <p><i class="fa fa-address-card fa-fw w3-margin-right w3-large w3-text-blue"></i><a href=Curriculum.html>Curriculum</a></p>
-		 
-          <hr>
+}
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
-          <p>Unity 3D</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">80%</div>
-          </div>
-          <p>C#</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">80%</div>
-          </div>
-          <p>Android</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:70%">70%</div>
-          </div>
-          <p>Videogames</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:75%">75%</div>
-          </div>
-          <br>
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Idiomas</b></p>
-          <p>Español</p>
-          
-          <p>Inglés</p>
-          
-          <br>
-        </div>
-      </div><br>
 
-    <!-- End Left Column -->
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top " id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">Sobre mí</a>
+    <a href="#videojuegos" class="w3-bar-item w3-button" style="width:20% !important">Videojuegos</a>
+    <a href="#proyectos" class="w3-bar-item w3-button" style="width:20% !important">Proyectos</a>
+	 <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">Curriculum</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large w3-padding-16" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-16 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Daniel Peña</h1>
+    <p>Software Developer</p>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Sobre mí</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+		<h3>Hola!</h3> <br>
+		Mi nombre es Daniel Peña y este es mi Portfolio personal.<br>
+		He estudiado ingeniería informática y estoy muy interesado en el desarrollo de videojuegos.<br>
+		En este portfolio encontrarás una pequeña muestra de los trabajos que he ido realizado en los ultimos años. 
+	
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
+    <p class="w3-wide">Unity3D</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
     </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
+    <p class="w3-wide">Java</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Android</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
     
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Daniel Peña  </h2>
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="videojuegos">
+    <h2 class="w3-text-light-grey">VIdeojuegos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <p> Proyectos realizados para la empresa Polar Bear Games</p>
+<hr>
+    <!-- Grid for photos -->
+    <div  style=" -32px">
+		
+		
+		
+		<!-- Videojuevos Polar -->
+		<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/MonsterTruck.png' 
+				onmouseover="this.src='Images/MonsterTruck.gif'"  
+				onmouseout="this.src='Images/MonsterTruck.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>MonsterTruck</h2>
+					<h3>4,6 &#9734;  + 10.000 Descargas</h3>
+					<p> Conduce un MonsterTruck evitando y saltando los distintos obstáculos hasta llegar a la meta.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Robot Fight War</h2>
+					<h3>4,0 &#9734;  + 10.000 Descargas</h3>
+					<p> Este videojuego consiste en apuntar y disparar a los robots que están atacando tu ciudad.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/Robots.png' 
+				onmouseover="this.src='Images/Robots.gif'"  
+				onmouseout="this.src='Images/Robots.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Shooter.png' 
+				onmouseover="this.src='Images/Shooter.gif'"  
+				onmouseout="this.src='Images/Shooter.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Deadly Snipper</h2>
+					<h3> + 1.000 Descargas</h3>
+					<p>Videojuego sobre francotiradores, apunta y dispara a los distintos delincuentes.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Army Truck Driving Simulator</h2>
+					<h3> + 500 Descargas</h3>
+					<p>Conduce distintos tipos de tanques y elimina a los enemigos en cada uno de los niveles.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/Tanks.png' 
+				onmouseover="this.src='Images/Tanks.gif'"  
+				onmouseout="this.src='Images/Tanks.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/FireFighter.png' 
+				onmouseover="this.src='Images/FireFighter.gif'"  
+				onmouseout="this.src='Images/FireFighter.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Firefighters Rescue Simulator</h2>
+					<h3>4,3 &#9734;  + 200.000 Descargas</h3>
+					<p> LLega hasta el fuego conduciendo un camión de bomberos y apaga el fuego.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>FPS</h2>
+					<h3>3.3 &#9734;  + 10.000 Descargas</h3>
+					<p> Videojuego basado en first person shooter.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/FPS.png' 
+				onmouseover="this.src='Images/FPS.gif'"  
+				onmouseout="this.src='Images/FPS.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+		
+		<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Zoo_Animal.png' 
+				onmouseover="this.src='Images/Zoo_Animal.gif'"  
+				onmouseout="this.src='Images/Zoo_Animal.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Zoo Animal Transport</h2>
+					<h3>4.1 &#9734;  + 100.000 Descargas</h3>
+					<p> Videojuego de conduccion de camiones tu objetivo es llegar hasta un punto determinado evitando distintos obstáculos.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Water Surfing Cars</h2>
+					<h3>3.7 &#9734;  + 50.000 Descargas</h3>
+					<p> Videojuego de carreras de coches a lo largo de un camino del que debes evitar caer.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/WaterCars.png' 
+				onmouseover="this.src='Images/WaterCars.gif'"  
+				onmouseout="this.src='Images/WaterCars.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+		
+		<!-- Mis Proyectos -->
+	</div>	
+ <div class="w3-padding-64 w3-content" id="proyectos">
+    <h2 class="w3-text-light-grey">Proyectos Personales</h2>
+    <hr style="width:200px" class="w3-opacity">
+	<p> Realizados para aprender todos los aspectos sobre el desarrollo de videojuegos.</p>
+<hr>
+		
+		
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Doodle.png' 
+				onmouseover="this.src='Images/Doodle.gif'"  
+				onmouseout="this.src='Images/Doodle.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Doodle Jump</h2>
+					<p>Réplica del minijuego Doodle Jump.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>MiniGolf</h2>
+					<p>Minijuego Golf para móvil.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/MiniGolf.png' 
+				onmouseover="this.src='Images/MiniGolf.gif'"  
+				onmouseout="this.src='Images/MiniGolf.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Quiz.png' 
+				onmouseover="this.src='Images/Quiz.gif'"  
+				onmouseout="this.src='Images/Quiz.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>QuizGame</h2>
+					<p>Minijuego de preguntas y respuestas.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Chicken Game</h2>
+					<p>Minijuego multijugador en el que gana el jugador que más celdas tiene con su color.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/Chicken.png' 
+				onmouseover="this.src='Images/Chicken.gif'"  
+				onmouseout="this.src='Images/Chicken.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/SharkShader.png' 
+				onmouseover="this.src='Images/SharkShader.gif'"  
+				onmouseout="this.src='Images/SharkShader.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Shark Shader</h2>
+					<p>Shader para recrear el movimiento que realiza un tiburón para desplazarse.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>World Generator</h2>
+					<p>Programa de generación automática de mundos para distintos videojuegos o niveles.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/WorldGenerator.png' 
+				onmouseover="this.src='Images/WorldGenerator.gif'"  
+				onmouseout="this.src='Images/WorldGenerator.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/GameOfLife.png' 
+				onmouseover="this.src='Images/GameOfLife.gif'"  
+				onmouseout="this.src='Images/GameOfLife.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Game of Life</h2>
+					<p>Autómata celular diseñado por John Conway.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Red Neuronal + Algoritmo Genético</h2>
+					<p>Proceso de aprendizaje de una red neuronal al mezclarse con un algoritmo genético. <br>
+			El objetivo de cada individuo es el de llegar lo más lejos posible evitando los obstáculos
+			En cada iteración los individuos que más lejos llegan pasan su información a la siguiente generación. Así se puede ver como en cada iteración se toman mejores decisiones para lograr el objetivo.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/Neural+Genetic.png' 
+				onmouseover="this.src='Images/Neural+Genetic.gif'"  
+				onmouseout="this.src='Images/Neural+Genetic.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/GIF_Genetic.png' 
+				onmouseover="this.src='Images/GIF_Genetic.gif'"  
+				onmouseout="this.src='Images/GIF_Genetic.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Algoritmo Genético</h2>
+					<p>En este caso los individuos parten de un comportamiento totalmente aleatorio y su objetivo es llegar hasta el punto marcado.
+	 En cada iteración se ve como se quedan más cerca del objetivo ya que los individuos que más cerca llegan, pasan su información a las siguientes generaciones.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Naves</h2>
+					<p>Videojuego completo, basado en los famosos videojuegos Invaders y Asteroids.<br>
+		El objetivo es proteger tu base de los distintos asteroides que intentan llegar hasta él.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_Nave.png' 
+				onmouseover="this.src='Images/GIF_Nave.gif'"  
+				onmouseout="this.src='Images/GIF_Nave.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Puzzle.png' 
+				onmouseover="this.src='Images/Puzzle.gif'"  
+				onmouseout="this.src='Images/Puzzle.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Puzzle 2D</h2>
+					<p>Rompecabezas en el que hay que conseguir formar una imagen con el movimiento de las piezas a un hueco libre.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Generación Procedimental Mazmorras</h2>
+					<p>Videojuego basado en la generación procedimental de niveles del videojuego Spelunky.
+	  Cada nivel, se crea de forma aleatoria, basándose en ciertos patrones de diseño, con ciertas estructuras prediseñadas.
+	  Lo que hace de cada nivel una aventura totalmente distinta.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_ProceduralGeneration.png' 
+				onmouseover="this.src='Images/GIF_ProceduralGeneration.gif'"  
+				onmouseout="this.src='Images/GIF_ProceduralGeneration.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/Snowrider.png' 
+				onmouseover="this.src='Images/Snowrider.gif'"  
+				onmouseout="this.src='Images/Snowrider.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Line Rider</h2>
+					<p> Réplica del videojuego Line Rider.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Mario</h2>
+					<p>Réplica de Super Mario con un estilo muy minimalista.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_Mario.png' 
+				onmouseover="this.src='Images/GIF_Mario.gif'"  
+				onmouseout="this.src='Images/GIF_Mario.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/GIF_Stack.png' 
+				onmouseover="this.src='Images/GIF_Stack.gif'"  
+				onmouseout="this.src='Images/GIF_Stack.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Stack Game</h2>
+					<p>Réplica del videojuego Stack de Ketchapp.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Partículas</h2>
+					<p>Diseño de distintos efectos con partículas.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_Particles.png' 
+				onmouseover="this.src='Images/GIF_Particles.gif'"  
+				onmouseout="this.src='Images/GIF_Particles.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/DungeonGenerator.png' 
+				onmouseover="this.src='Images/DungeonGenerator.gif'"  
+				onmouseout="this.src='Images/DungeonGenerator.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Generación Mazmorras</h2>
+					<p>Muestra del gran potencial de la generación procedimental para la creación de distintos niveles en un videojuego de mazmorras.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Physics Game</h2>
+					<p>Físicas en un entorno 2D, utilizando distintos pesos, hinge joints y colliders.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_Physics.png' 
+				onmouseover="this.src='Images/GIF_Physics.gif'"  
+				onmouseout="this.src='Images/GIF_Physics.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+<!--Start group-->
+		<div class="row">
+			<div class="column" align="center">
+				<img src='Images/GIF_Snake.png' 
+				onmouseover="this.src='Images/GIF_Snake.gif'"  
+				onmouseout="this.src='Images/GIF_Snake.png'" 
+				style="max-width: 100% "  />
+			</div>
+			<div class="column">
+				<h2>Snake</h2>
+					<p>Réplica del videojuego Snake, uno de mis videojuegos favoritos de la infancia.</p>
+			</div>
+		</div>
+		<hr>
+		<!--  -->
+		<div class="row">
+			<div class="column">
+				<h2>Pong</h2>
+					<p>Réplica del viedeojuego Pong con elementos de UI, físicas y colisiones.</p>
+			</div>
+			<div class="column" align="center">
+				<img src='Images/GIF_Pong.png' 
+				onmouseover="this.src='Images/GIF_Pong.gif'"  
+				onmouseout="this.src='Images/GIF_Pong.png'" 
+				style="max-width: 100% "  />
+			</div>
+		</div>
+		<hr>
+<!-- End Group		-->
+
+		
+		
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey " id="contact">
+    <h2 class="w3-text-light-grey w3-hover-text-green ">Curriculum</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+	<!-- Contact Section -->
+		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Experiencia Laboral</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Portfolio </b></h5>
-          <p> Hola! <br>
-		Soy Daniel Peña y este es mi Portfolio personal.<br>
-		Aquí encontrarás una pequeña muestra de los trabajos que he ido realizando con el fin de aprender sobre el mundo de los videojuegos  </p>
+          <h5 class="w3-opacity"><b>Programador Principal - Polar Bear Games</b></h5>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2018 - <span class="w3-tag w3-cyan w3-round">Current</span></h6>
+          <p>Desarrollo de videojuegos Android con Unity 3D</p>
+		  <p>Más de 20 videojuegos terminados</p>
+		  <p>Desarrollo de módulos de publicidad</p>
+		  <p>Supervisión de alumnos en prácticas</p>
 		  
           <hr>
         </div>
-      </div>
-	  
-	  
-	  
-	  
-	   <!--  ************************VIDEOJUEGOS POLAR ************************************************ -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Videojuegos realizados en Polar Bear Games</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Programador C# Unity - Lurtis Rules </b></h5>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Enero 2016 - Junio 2016</h6>
+          <p>Programador becario en Lurtis Rules</p>
+		  <p>Desarrollo de interfaz de usuario de una de sus apliaciones</p>
+		  <p>Desarrollo en C# con el motor Unity3D</p>
+		 
+          <hr>
+        </div>
 		
-        <hr class="w3-clear">
-        <p>
-		<h3>FireTruck</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Firetruck1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Firetruck2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>MegaRamp</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Ramp1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Ramp2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>Shooter</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Shooter1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Shooter2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>Tanks</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Tank1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Tank2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>WaterRamp</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/WaterRamp1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/WaterRamp2.png'   style="max-width: 50%; "    />
-		</p>
-		<p>
-		<h3>MonsterTruck</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Monster1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Monster2.png'   style="max-width: 50%; "    />
-		</p>
-		<p>
-		<h3>Robot</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Robot1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Robot2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>Snipper</h3>
-		
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Snipper1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Snipper2.png'   style="max-width: 50%; "    />
-		</p>
-		
-		<p>
-		<h3>TowTruck</h3>
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/TowTruck1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/TowTruck2.png'   style="max-width: 50%; "    />
-		</p>
-		<p>
-		<h3>Animal Transport</h3>
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Polar/Zoo1.png'   style="max-width: 50%; "    />
-		<img src='Images/Polar/Zoo2.png'   style="max-width: 50%; "    />
-		</p>
+		 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Formación</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Grado en Ingeniería Informática </b></h5>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2016</h6>
+          <p>Universidad Politécnica de Madrid</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Bachillerato de Ciencias y Tecnología  </b></h5>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2012</h6>
+          <p>Colegio Sagrada Familia de Urgel </p>
+          <hr>
+        </div>
 		
 		
-		
-		
-      </div>
+		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-globe fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Idiomas</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Español </b></h5>
+         
+          <p>Lengua Materna</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Inglés </b></h5>
+          <p>Nivel Medio-Alto </p>
+          <hr>
+        </div>  
+	<!-- Contact Section -->
+     
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Doodle Jump</h2>
-        <hr class="w3-clear">
-        <p>
-		Réplica del minijuego Doodle Jump.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Doodle.png' onclick="this.src='Images/Doodle.gif';" style="max-width: 100%; "    />
-		</p>
-      </div>
-	  
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>MiniGolf</h2> 
-        <hr class="w3-clear">
-        <p>
-		Minijuego Golf para móvil.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/MiniGolf.png' onclick="this.src='Images/MiniGolf.gif';" style="max-width: 100%;"   />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>QuizGame</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Minijuego de preguntas y respuestas.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Quiz.png' onclick="this.src='Images/Quiz.gif';" style="max-width: 100%; "  />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Chicken Game</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Minijuego multijugador en el que gana el jugador que más celdas tiene con su color.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Chicken.png' onclick="this.src='Images/Chicken.gif';"style="max-width: 100%;  "  />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Shark Shader</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Shader para recrear el movimiento que realiza un tiburón para desplazarse.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/SharkShader.png' onclick="this.src='Images/SharkShader.gif';" style="max-width: 100%; "  />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>World Generator</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Programa de generación automática de mundos para distintos videojuegos o niveles.	 
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/WorldGenerator.png' onclick="this.src='Images/WorldGenerator.gif';" style="max-width: 100%;  " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Game of Life</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Autómata celular diseñado por John Conway
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GameOfLife.png' onclick="this.src='Images/GameOfLife.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Red Neuronal + Algoritmo Genético</h2> </h2>
-        <hr class="w3-clear">
-       <p>Proceso de aprendizaje de una red neuronal al mezclarse con un algoritmo genético. <br>
-			El objetivo de cada individuo es el de llegar lo más lejos posible evitando los obstáculos
-			En cada iteración los individuos que más lejos llegan pasan su información a la siguiente generación. Así se puede ver como en cada iteración se toman mejores decisiones para lograr el objetivo. 
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Neural+Genetic.png' onclick="this.src='Images/Neural+Genetic.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Algoritmo Genético</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		En este caso los individuos parten de un comportamiento totalmente aleatorio y su objetivo es llegar hasta el punto marcado.
-	 En cada iteración se ve como se quedan más cerca del objetivo ya que los individuos que más cerca llegan, pasan su información a las siguientes generaciones.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Genetic.png' onclick="this.src='Images/GIF_Genetic.gif';" style="max-width: 100%;     " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Naves</h2> </h2>
-        <hr class="w3-clear">
-       <p>
-	   Videojuego completo, basado en los famosos videojuegos Invaders y Asteroids.<br>
-		El objetivo es proteger tu base de los distintos asteroides que intentan llegar hasta él.<br>
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Nave.png' onclick="this.src='Images/GIF_Nave.gif';"style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Puzzle 2D</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Rompecabezas en el que hay que conseguir formar una imagen con el movimiento de las piezas a un hueco libre.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Puzzle.png' onclick="this.src='Images/Puzzle.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Generación Procedimental Mazmorras</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Videojuego basado en la generación procedimental de niveles del videojuego Spelunky.
-	  Cada nivel, se crea de forma aleatoria, basándose en ciertos patrones de diseño, con ciertas estructuras prediseñadas.
-	  Lo que hace de cada nivel una aventura totalmente distinta.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_ProceduralGeneration.png' onclick="this.src='Images/GIF_ProceduralGeneration.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Line Rider</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		 Réplica del videojuego Line Rider.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/Snowrider.png' onclick="this.src='Images/Snowrider.gif';" style="max-width: 100%;     " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Mario</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Réplica de Super Mario con un estilo muy minimalista.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Mario.png' onclick="this.src='Images/GIF_Mario.gif';"  style="max-width: 100%;   " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Stack</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		 Réplica del videojuego Stack de Ketchapp
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Stack.png' onclick="this.src='Images/GIF_Stack.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Partículas</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Diseño de distintos efectos con partículas.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Particles.png' onclick="this.src='Images/GIF_Particles.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Generación Mazmorras</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Muestra del gran potencial de la generación procedimental para la creación de distintos niveles en un videojuego de mazmorras
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/DungeonGenerator.png' onclick="this.src='Images/DungeonGenerator.gif';" style="max-width: 100%;     " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Physics</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Físicas en un entorno 2D, utilizando distintos pesos, hinge joints y colliders
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Physics.png' onclick="this.src='Images/GIF_Physics.gif';" style="max-width: 100%;     " />
-		</p>
-      </div>
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Snake</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Réplica del videojuego Snake, uno de mis videojuegos favoritos de la infancia.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Snake.png' onclick="this.src='Images/GIF_Snake.gif';"  style="max-width: 100%;     " />
-		</p>
-      </div>
-	  
-	  <!--  *************************************************************************************************************** -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2>Pong</h2> </h2>
-        <hr class="w3-clear">
-        <p>
-		Réplica del viedeojuego Pong con elementos de UI, físicas y colisiones.
-		</p>
-		<p class="w3-border w3-padding-large w3-padding-16 w3-center">
-		<!--<IMG SRC="Images/Logo.png"   />   -->
-		<img src='Images/GIF_Pong.png' onclick="this.src='Images/GIF_Pong.gif';" style="max-width: 100%;    " />
-		</p>
-      </div>
-	  
-	  
-	  
-	  
-	  
-	  
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
+    </div><br>
+  <!-- End Contact Section -->
   </div>
   
-  <!-- End Page Container -->
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <p class="w3-medium"> <a  target="_blank" class="w3-hover-text-green">Daniel Peña </a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
 </div>
 
-<footer class="w3-container w3-black w3-center w3-margin-top">
-  <p>Portfolio Daniel Peña</p>
-  
-  
-</footer>
-
 </body>
+</html>
 </html>
